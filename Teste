@@ -6,7 +6,7 @@
     <title>Meu Portfólio de Desenvolvedor</title>
     <!-- Google Fonts & Lucide Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
@@ -335,7 +335,7 @@
 
       /* Responsividade */
       @media (max-width: 768px) {
-        navbar {
+        nav {
           flex-direction: column;
           gap: 1rem;
         }
@@ -352,7 +352,7 @@
   </head>
   <body>
     <!-- Barra de Navegação -->
-    <nav>
+    <nav aria-label="Navegação principal">
       <a href="#" class="logo">
         <i data-lucide="code-2"></i>
         <span>MeuPortfólio</span>
@@ -364,7 +364,7 @@
       </ul>
     </nav>
 
-    <div class="container">
+    <main class="container" id="main-content">
       <!-- Seção Hero -->
       <header class="hero" id="sobre">
         <div class="hero-badge">
@@ -518,18 +518,18 @@
           </article>
         </div>
       </section>
-    </div>
+    </main>
 
     <!-- Rodapé -->
     <footer id="contato">
       <div class="social-links">
-        <a href="https://github.com/seu-usuario" target="_blank" class="social-icon" title="GitHub">
+        <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub" aria-label="GitHub">
           <i data-lucide="github"></i>
         </a>
-        <a href="https://linkedin.com/in/seu-usuario" target="_blank" class="social-icon" title="LinkedIn">
+        <a href="https://linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn" aria-label="LinkedIn">
           <i data-lucide="linkedin"></i>
         </a>
-        <a href="mailto:seu-email@exemplo.com" class="social-icon" title="E-mail">
+        <a href="mailto:seu-email@exemplo.com" class="social-icon" title="E-mail" aria-label="Enviar e-mail">
           <i data-lucide="mail"></i>
         </a>
       </div>
