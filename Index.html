@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treinamento: Segurança da Informação & LGPD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #0f172a;
+      color: #f8fafc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+
+    .course-card {
+      background-color: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 650px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Barra de Progresso */
+    .progress-bar-container {
+      width: 100%;
+      background-color: #334155;
+      height: 8px;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 33%;
+      background-color: #38bdf8;
+      transition: width 0.4s ease;
+    }
+
+    /* Modulos */
+    .step {
+      display: none;
+    }
+
+    .step.active {
+      display: block;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: rgba(56, 189, 248, 0.1);
+      color: #38bdf8;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    h1, h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #f8fafc;
+    }
+
+    p {
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-size: 0.975rem;
+    }
+
+    /* Caixas de Destaque */
+    .highlight-box {
+      background-color: #0f172a;
+      border-left: 4px solid #38bdf8;
+      padding: 1rem;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+
+    /* Formulário do Quiz */
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .option-btn {
+      background-color: #0f172a;
+      border: 1px solid #334155;
+      color: #f8fafc;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: left;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+
+    .option-btn:hover {
+      border-color: #38bdf8;
+      background-color: rgba(56, 189, 248, 0.05);
+    }
+
+    .option-btn.correct {
+      background-color: rgba(34, 197, 94, 0.2) !important;
+      border-color: #22c55e !important;
+      color: #4ade80;
+    }
+
+    .option-btn.incorrect {
+      background-color: rgba(239, 68, 68, 0.2) !important;
+      border-color: #ef4444 !important;
+      color: #f87171;
+    }
+
+    .feedback {
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      min-height: 1.5rem;
+    }
+
+    /* Botões */
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn-primary {
+      background-color: #38bdf8;
+      color: #0f172a;
+      margin-left: auto;
+    }
+
+    .btn-primary:hover {
+      background-color: #0284c7;
+      color: #ffffff;
+    }
+
+    .btn-disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="course-card">
+    <!-- Barra de Progresso -->
+    <div class="progress-bar-container">
+      <div class="progress-bar" id="progress"></div>
+    </div>
+
+    <!-- MÓDULO 1: CONCEITO -->
+    <div class="step active" id="step-1">
+      <span class="badge">Módulo 1 de 3 • Conceitos Básicos</span>
+      <h1>Boas-Vindas à Segurança da Informação</h1>
+      <p>
+        No ambiente corporativo moderno, a proteção de dados não é responsabilidade apenas da equipe de TI, mas de todos os colaboradores.
+      </p>
+      <div class="highlight-box">
+        💡 <strong>Princípio dos 3 Pilares (CID):</strong> A Segurança da Informação é baseada em <strong>Confidencialidade</strong> (acesso Restrito), <strong>Integridade</strong> (dados Exatos) e <strong>Disponibilidade</strong> (acesso quando necessário).
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="nextStep(2)">Avançar para o Caso Prático →</button>
+      </div>
+    </div>
+
+    <!-- MÓDULO 2: CASO PRÁTICO -->
+    <div class="step" id="step-2">
+      <span class="badge">Módulo 2 de 3 • Estudo de Caso</span>
+      <h1>Engenharia Social & Phishing</h1>
+      <p>
+        Phishing é uma técnica de fraude online utilizada por criminosos para induzir colaboradores a revelar informações confidenciais, como senhas e dados corporativos.
+      </p>
+      <div class="highlight-box">
+        ⚠️ <strong>Sinal de Alerta:</strong> E-mails urgentes com links externos, erros gramaticais ou remetentes suspeitos solicitando alteração imediata de senha devem ser reportados imediatamente.
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="nextStep(3)">Ir para o Teste de Conhecimento →</button>
+      </div>
+    </div>
+
+    <!-- MÓDULO 3: QUIZ INTERATIVO -->
+    <div class="step" id="step-3">
+      <span class="badge">Módulo 3 de 3 • Avaliação</span>
+      <h2>Simulação de Tomada de Decisão</h2>
+      <p>
+        Você recebe um e-mail com o assunto <em>"Urgente: Atualização Cadastral do RH"</em> exigindo que você clique num link em até 2 horas para não ter o acesso bloqueado. O que fazer?
+      </p>
+
+      <div class="options">
+        <button class="option-btn" onclick="checkAnswer(this, false)">A) Clicar no link imediatamente e preencher os dados solicitados.</button>
+        <button class="option-btn" onclick="checkAnswer(this, false)">B) Encaminhar o e-mail para seus colegas avisando sobre a atualização.</button>
+        <button class="option-btn" onclick="checkAnswer(this, true)">C) Não clicar no link e reportar a mensagem para a equipe de TI/Segurança.</button>
+      </div>
+
+      <div class="feedback" id="feedback"></div>
+
+      <div class="btn-group">
+        <button class="btn btn-primary btn-disabled" id="finish-btn" disabled onclick="nextStep(4)">Concluir Treinamento</button>
+      </div>
+    </div>
+
+    <!-- MÓDULO 4: CONCLUSÃO -->
+    <div class="step" id="step-4">
+      <span class="badge" style="background-color: rgba(34, 197, 94, 0.1); color: #4ade80;">Concluído</span>
+      <h1>Parabéns!</h1>
+      <p>
+        Você concluiu o módulo de conscientização em Segurança da Informação. Seu engajamento garante a proteção dos dados da nossa organização.
+      </p>
+      <div class="highlight-box" style="border-left-color: #22c55e;">
+        ✅ <strong>Status:</strong> Módulo concluído com sucesso.
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="restartCourse()">Reiniciar Curso</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function nextStep(stepNumber) {
+      document.querySelectorAll('.step').forEach(step => step.classList.remove('active'));
+      document.getElementById(`step-${stepNumber}`).classList.add('active');
+
+      const progress = document.getElementById('progress');
+      if (stepNumber === 1) progress.style.width = '33%';
+      if (stepNumber === 2) progress.style.width = '66%';
+      if (stepNumber === 3) progress.style.width = '90%';
+      if (stepNumber === 4) progress.style.width = '100%';
+    }
+
+    function checkAnswer(button, isCorrect) {
+      const options = document.querySelectorAll('.option-btn');
+      const feedback = document.getElementById('feedback');
+      const finishBtn = document.getElementById('finish-btn');
+
+      options.forEach(opt => {
+        opt.disabled = true;
+        opt.style.cursor = 'default';
+      });
+
+      if (isCorrect) {
+        button.classList.add('correct');
+        feedback.innerHTML = '<span style="color: #4ade80;">Correto! Resposta alinhada com as políticas de segurança.</span>';
+      } else {
+        button.classList.add('incorrect');
+        feedback.innerHTML = '<span style="color: #f87171;">Incorreto. A ação correta é sempre reportar sem clicar em links suspeitos.</span>';
+      }
+
+      finishBtn.classList.remove('btn-disabled');
+      finishBtn.disabled = false;
+    }
+
+    function restartCourse() {
+      const options = document.querySelectorAll('.option-btn');
+      options.forEach(opt => {
+        opt.disabled = false;
+        opt.classList.remove('correct', 'incorrect');
+        opt.style.cursor = 'pointer';
+      });
+
+      document.getElementById('feedback').innerHTML = '';
+      const finishBtn = document.getElementById('finish-btn');
+      finishBtn.classList.add('btn-disabled');
+      finishBtn.disabled = true;
+
+      nextStep(1);
+    }
+  </script>
+</body>
+  </html>
