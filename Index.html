@@ -48,7 +48,7 @@
 
     .progress-bar {
       height: 100%;
-      width: 33%;
+      width: 25%;
       background-color: #38bdf8;
       transition: width 0.4s ease;
     }
@@ -186,52 +186,52 @@
 
     <!-- MÓDULO 1: CONCEITO -->
     <div class="step active" id="step-1">
-      <span class="badge">Módulo 1 de 3 • Conceitos Básicos</span>
+      <span class="badge">Módulo 1 de 4 • Conceitos Básicos</span>
       <h1>Boas-Vindas à Segurança da Informação</h1>
       <p>
         No ambiente corporativo moderno, a proteção de dados não é responsabilidade apenas da equipe de TI, mas de todos os colaboradores.
       </p>
       <div class="highlight-box">
-        💡 <strong>Princípio dos 3 Pilares (CID):</strong> A Segurança da Informação é baseada em <strong>Confidencialidade</strong> (acesso Restrito), <strong>Integridade</strong> (dados Exatos) e <strong>Disponibilidade</strong> (acesso quando necessário).
+        💡 <strong>Princípio dos 3 Pilares (CID):</strong> A Segurança da Informação é baseada em <strong>Confidencialidade</strong> (acesso restrito), <strong>Integridade</strong> (dados corretos e não alterados) e <strong>Disponibilidade</strong> (acesso quando necessário).
       </div>
       <div class="btn-group">
-        <button class="btn btn-primary" onclick="nextStep(2)">Avançar para o Caso Prático →</button>
+        <button type="button" class="btn btn-primary" onclick="nextStep(2)">Avançar para o Caso Prático →</button>
       </div>
     </div>
 
     <!-- MÓDULO 2: CASO PRÁTICO -->
     <div class="step" id="step-2">
-      <span class="badge">Módulo 2 de 3 • Estudo de Caso</span>
+      <span class="badge">Módulo 2 de 4 • Estudo de Caso</span>
       <h1>Engenharia Social & Phishing</h1>
       <p>
         Phishing é uma técnica de fraude online utilizada por criminosos para induzir colaboradores a revelar informações confidenciais, como senhas e dados corporativos.
       </p>
       <div class="highlight-box">
-        ⚠️ <strong>Sinal de Alerta:</strong> E-mails urgentes com links externos, erros gramaticais ou remetentes suspeitos solicitando alteração imediata de senha devem ser reportados imediatamente.
+        ⚠️ <strong>Sinal de Alerta:</strong> E-mails urgentes com links externos, erros gramaticais ou remetentes suspeitos solicitando alteração imediata de senha devem ser reportados imediatamente ao time de TI/Segurança; não clique em links nem informe credenciais.
       </div>
       <div class="btn-group">
-        <button class="btn btn-primary" onclick="nextStep(3)">Ir para o Teste de Conhecimento →</button>
+        <button type="button" class="btn btn-primary" onclick="nextStep(3)">Ir para o Teste de Conhecimento →</button>
       </div>
     </div>
 
     <!-- MÓDULO 3: QUIZ INTERATIVO -->
     <div class="step" id="step-3">
-      <span class="badge">Módulo 3 de 3 • Avaliação</span>
+      <span class="badge">Módulo 3 de 4 • Avaliação</span>
       <h2>Simulação de Tomada de Decisão</h2>
       <p>
         Você recebe um e-mail com o assunto <em>"Urgente: Atualização Cadastral do RH"</em> exigindo que você clique num link em até 2 horas para não ter o acesso bloqueado. O que fazer?
       </p>
 
       <div class="options">
-        <button class="option-btn" onclick="checkAnswer(this, false)">A) Clicar no link imediatamente e preencher os dados solicitados.</button>
-        <button class="option-btn" onclick="checkAnswer(this, false)">B) Encaminhar o e-mail para seus colegas avisando sobre a atualização.</button>
-        <button class="option-btn" onclick="checkAnswer(this, true)">C) Não clicar no link e reportar a mensagem para a equipe de TI/Segurança.</button>
+        <button type="button" class="option-btn" onclick="checkAnswer(this, false)">A) Clicar no link imediatamente e preencher os dados solicitados.</button>
+        <button type="button" class="option-btn" onclick="checkAnswer(this, false)">B) Encaminhar o e-mail para seus colegas avisando sobre a atualização.</button>
+        <button type="button" class="option-btn" onclick="checkAnswer(this, true)">C) Não clicar no link e reportar a mensagem para a equipe de TI/Segurança.</button>
       </div>
 
-      <div class="feedback" id="feedback"></div>
+      <div class="feedback" id="feedback" aria-live="polite"></div>
 
       <div class="btn-group">
-        <button class="btn btn-primary btn-disabled" id="finish-btn" disabled onclick="nextStep(4)">Concluir Treinamento</button>
+        <button type="button" class="btn btn-primary btn-disabled" id="finish-btn" disabled onclick="nextStep(4)">Concluir Treinamento</button>
       </div>
     </div>
 
@@ -246,21 +246,25 @@
         ✅ <strong>Status:</strong> Módulo concluído com sucesso.
       </div>
       <div class="btn-group">
-        <button class="btn btn-primary" onclick="restartCourse()">Reiniciar Curso</button>
+        <button type="button" class="btn btn-primary" onclick="restartCourse()">Reiniciar Curso</button>
       </div>
     </div>
 
   </div>
 
   <script>
+    // Define estado inicial da barra
+    document.getElementById('progress').style.width = '25%';
+
     function nextStep(stepNumber) {
       document.querySelectorAll('.step').forEach(step => step.classList.remove('active'));
-      document.getElementById(`step-${stepNumber}`).classList.add('active');
+      const target = document.getElementById(`step-${stepNumber}`);
+      if (target) target.classList.add('active');
 
       const progress = document.getElementById('progress');
-      if (stepNumber === 1) progress.style.width = '33%';
-      if (stepNumber === 2) progress.style.width = '66%';
-      if (stepNumber === 3) progress.style.width = '90%';
+      if (stepNumber === 1) progress.style.width = '25%';
+      if (stepNumber === 2) progress.style.width = '50%';
+      if (stepNumber === 3) progress.style.width = '75%';
       if (stepNumber === 4) progress.style.width = '100%';
     }
 
@@ -303,4 +307,4 @@
     }
   </script>
 </body>
-  </html>
+</html>
