@@ -64,14 +64,31 @@
         border-bottom: 1px solid var(--border-color);
       }
 
-      .logo {
-        font-size: 1.5rem;
-        font-weight: 800;
-        color: var(--accent-color);
+            .logo {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.75rem;
         text-decoration: none;
+      }
+
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+      }
+
+      .logo-title {
+        font-size: 1.35rem;
+        font-weight: 800;
+        color: var(--accent-color);
+      }
+
+      .logo-subtitle {
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--text-muted);
+      }
+      
       }
 
       .card-projeto-imagem {
@@ -409,7 +426,7 @@
           <!-- PROJETO 1 -->
           <article class="card">
             <div class="card-preview">
-  <img src="immg.jpeg" alt="Texto descritivo do projeto" class="card-projeto-imagem" />
+  <img src="img.jpeg" alt="Texto descritivo do projeto" class="card-projeto-imagem" />
             </div>
             <div class="card-body">
               <h3 class="card-title">Projeto 1: Capacitação em Proteção de Dados (LGPD) & Cibersegurança</h3>
@@ -439,7 +456,7 @@
           <!-- PROJETO 2 -->
           <article class="card">
             <div class="card-preview">
-  <img src="immmg.jpeg" alt="Texto descritivo do projeto" class="card-projeto-imagem" />
+  <img src="immg.jpeg" alt="Texto descritivo do projeto" class="card-projeto-imagem" />
             </div>
             <div class="card-body">
               <h3 class="card-title">Atendimento a Clientes de Empresas & Gestão de Contas</h3>
@@ -468,9 +485,9 @@
           <!-- PROJETO 3 -->
           <article class="card">
             <div class="card-preview">
-              <i data-lucide="database" style="width: 48px; height: 48px"></i>
-              <img src="immmg.jpeg" alt="Texto descritivo do projeto" class="card-projeto-imagem" />
-            </div>
+              <div class="card-preview">
+  <img src="immg.jpeg" alt="Texto descritivo do projeto" class="card-projeto-imagem" />
+              </div>
             <div class="card-body">
               <h3 class="card-title">Projeto 3: Comunicação Assertiva & Feedback no Trabalho Remoto </h3>
               <p class="card-description">
