@@ -64,7 +64,7 @@
         border-bottom: 1px solid var(--border-color);
       }
 
-            .logo {
+      .logo {
         display: flex;
         align-items: center;
         gap: 0.75rem;
@@ -88,14 +88,12 @@
         font-weight: 500;
         color: var(--text-muted);
       }
-      
-      }
 
       .card-projeto-imagem {
-  width: 100%;
-  height: 200px; /* Altere a altura fixa se preferir */
-  object-fit: cover; /* Corta a imagem perfeitamente sem distorcer */
-  object-position: top center; /* Foca na parte superior da imagem (topo do site) */
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        object-position: top center;
       }
       
       .nav-links {
@@ -149,7 +147,7 @@
         font-size: 2.75rem;
         font-weight: 800;
         line-height: 1.2;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         letter-spacing: -0.02em;
       }
 
@@ -157,10 +155,20 @@
         color: var(--accent-color);
       }
 
-      .hero p {
-        font-size: 1.125rem;
+      .about-item {
+        margin-bottom: 1.5rem;
+        text-align: left;
+      }
+
+      .about-item h3 {
+        color: var(--accent-color);
+        font-size: 1.25rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .about-item p {
+        font-size: 1rem;
         color: var(--text-muted);
-        margin-bottom: 2rem;
       }
 
       /* Seção de Projetos */
@@ -378,11 +386,11 @@
     <!-- Barra de Navegação -->
     <nav aria-label="Navegação principal">
       <a href="#" class="logo">
-  <i data-lucide="code-2"></i>
-  <div class="logo-text">
-    <span class="logo-title">Portfólio</span>
-    <span class="logo-subtitle">Larissa Raiane da Silva</span>
-  </div>
+        <i data-lucide="code-2"></i>
+        <div class="logo-text">
+          <span class="logo-title">Portfólio</span>
+          <span class="logo-subtitle">Larissa Raiane da Silva</span>
+        </div>
       </a>
       
       <ul class="nav-links">
@@ -400,20 +408,24 @@
           <span>Transformando aprendizado em impacto real.</span>
         </div>
         <h1>
-          Design Instrucional & Educação Corporativa:
+          Design Instrucional & Educación Corporativa:
           <span>Conectando pessoas, estratégia e aprendizado.</span>
-        <h3>Minha Base</h3>
-                <p>Graduação em Pedagogia. Base sólida em didática, processos cognitivos e metodologias de ensino voltadas para a compreensão do comportamento humano e facilitação da aprendizagem.</p>
-            </div>
-            
-            <div class="about-item">
-                <h3>Minha Visão</h3>
-                <p>Formação Técnica em RH e capacitação em Educação Corporativa. Visão sistêmica voltada para o alinhamento do T&D (Treinamento e Desenvolvimento) com a cultura, o clima organizacional e as metas estratégicas da empresa.</p>
-            </div>
-            
-            <div class="about-item">
-                <h3>Minha Prática</h3>
-                <p>Design Instrucional focado no digital. Criação de trilhas de aprendizagem, treinamentos interativos, simulações de cenários reais, conteúdos voltados para compliance (como LGPD) e capacitações corporativas responsivas.</p>
+        </h1>
+
+        <div class="about-item">
+          <h3>Minha Base</h3>
+          <p>Graduação em Pedagogia. Base sólida em didática, processos cognitivos e metodologias de ensino voltadas para a compreensão do comportamento humano e facilitação da aprendizagem.</p>
+        </div>
+        
+        <div class="about-item">
+          <h3>Minha Visão</h3>
+          <p>Formação Técnica em RH e capacitação em Educação Corporativa. Visão sistêmica voltada para o alinhamento do T&D (Treinamento e Desenvolvimento) com a cultura, o clima organizacional e as metas estratégicas da empresa.</p>
+        </div>
+        
+        <div class="about-item">
+          <h3>Minha Prática</h3>
+          <p>Design Instrucional focado no digital. Criação de trilhas de aprendizagem, treinamentos interativos, simulações de cenários reais, conteúdos voltados para compliance (como LGPD) e capacitações corporativas responsivas.</p>
+        </div>
       </header>
 
       <!-- Lista de Projetos -->
@@ -426,7 +438,7 @@
           <!-- PROJETO 1 -->
           <article class="card">
             <div class="card-preview">
-  <img src="img.jpeg" alt="Texto descritivo do projeto" class="card-projeto-imagem" />
+              <img src="img.jpeg" alt="Texto descritivo do projeto" class="card-projeto-imagem" />
             </div>
             <div class="card-body">
               <h3 class="card-title">Projeto 1: Capacitação em Proteção de Dados (LGPD) & Cibersegurança</h3>
@@ -439,7 +451,6 @@
                 <span class="tag">JavaScript</span>
               </div>
               <div class="btn-group">
-                <!-- Substitua o link abaixo pelo link do seu repositório no GitHub ou site final -->
                 <a
                   href="https://larissasilvah.github.io/TreinamentoCapacita-o-em-Prote-o-de-Dados-LGPD-l-Ciberseguran-a/"
                   target="_blank"
@@ -456,15 +467,15 @@
           <!-- PROJETO 2 -->
           <article class="card">
             <div class="card-preview">
-             <img src="immg.jpeg" alt="Texto descritivo do projeto" class="card-projeto-imagem" />
+              <img src="immg.jpeg" alt="Texto descritivo do projeto" class="card-projeto-imagem" />
             </div>
             <div class="card-body">
               <h3 class="card-title">Atendimento a Clientes de Empresas & Gestão de Contas</h3>
               <p class="card-description">
-                Plataforma interativa de treinamento B2B focada em suporte corporativo, gestão de contas estratégicas, mapeamento de perfis executivos, simulação de crises e retenção de receita..
+                Plataforma interativa de treinamento B2B focada em suporte corporativo, gestão de contas estratégicas, mapeamento de perfis executivos, simulação de crises e retenção de receita.
               </p>
               <div class="card-tags">
-                <span class="tag">lHTML5</span>
+                <span class="tag">HTML5</span>
                 <span class="tag">CSS3</span>
                 <span class="tag">JavaScript</span>
               </div>
@@ -485,15 +496,14 @@
           <!-- PROJETO 3 -->
           <article class="card">
             <div class="card-preview">
-              <div class="card-preview">
-         <img src="immmg.jpeg" alt="imagem do projeto" class="card-projeto-imagem" />
-              </div>
+              <img src="immmg.jpeg" alt="imagem do projeto" class="card-projeto-imagem" />
+            </div>
             <div class="card-body">
-              <h3 class="card-title">Projeto 3: Comunicação Assertiva & Feedback no Trabalho Remoto </h3>
+              <h3 class="card-title">Projeto 3: Comunicação Assertiva & Feedback no Trabalho Remoto</h3>
               <p class="card-description">
                 Guia prático sobre técnicas de comunicação clara e remota, focado em evitar ruídos digitais, estruturar feedbacks construtivos e manter o alinhamento e a produtividade de equipes em ambientes virtuais.
               </p>
-              <div class="cards-tags">
+              <div class="card-tags">
                 <span class="tag">Canva</span>
               </div>
               <div class="btn-group">
@@ -520,8 +530,7 @@
             <div class="card-body">
               <h3 class="card-title">Projeto 4: Ferramenta Automática</h3>
               <p class="card-description">
-                Espaço reservado para o quarto projeto. Uma excelente oportunidade para colocar um script, automação ou
-                jogo interativo.
+                Espaço reservado para o quarto projeto. Uma excelente oportunidade para colocar um script, automação ou jogo interativo.
               </p>
               <div class="card-tags">
                 <span class="tag">Python</span>
@@ -554,7 +563,7 @@
         <a href="tel:+558181683256" target="_blank" rel="noopener noreferrer" class="social-icon" title="Telefone" aria-label="Telefone">
           <i data-lucide="phone"></i>
         </a>
-        <a href="mailto:larissarayane1919@gmail.com class="social-icon" title="E-mail" aria-label="Enviar e-mail">
+        <a href="mailto:larissarayane1919@gmail.com" class="social-icon" title="E-mail" aria-label="Enviar e-mail">
           <i data-lucide="mail"></i>
         </a>
       </div>
@@ -566,4 +575,5 @@
       lucide.createIcons();
     </script>
   </body>
-</html>
+            </html>
+  
